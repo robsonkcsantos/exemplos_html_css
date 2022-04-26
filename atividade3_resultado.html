@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            span { color: red; }
+        </style>
+        <script type="text/javascript">
+            function calc(){
+
+                n1 = parseFloat(document.getElementById('n1').value);
+                n2 = parseFloat(document.getElementById('n2').value);
+                op = document.getElementById('op').value;
+
+                var r = 0;
+
+                if(op == 'soma'){ r = n1 + n2; }
+                if(op == 'subtracao'){ r = n1 - n2; }
+
+                document.getElementById('resultado').innerHTML = 'O resultado é: ' + r;
+            }           
+        </script>
+    </head>
+    <body>
+        <h1>Crie uma aplicação para efetuar cálculo aritméticos de soma e subtração.</h1>
+        <h3>Considere os seguintes critérios:</h3>
+        <ol>
+            <li>Ao executar o script a aplicação deve solicitar a entrada de um número, seguido de uma operação de soma ou subtração e posteriormente seguido de um segundo número.</li>
+            <li>A operação deve ser inserida pelo usuário de forma textual, ou seja, quando o sistema solicita a operação o usuário deve informar o texto ‘soma’ ou ‘subtração’ (sem as aspas).</li>
+            <li>Na sequência o sistema deve enviar os parâmetros para uma função efetuar o devido cálculo. Exemplo: calculo(num1, num2, operacao).</li>
+            <li>A função deve executar o cálculo com base na operação informada pelo usuário e na sequência deve retornar o valor encontrado.</li>
+            <li>Ao término o sistema deve fornecer a seguinte saída para o usuário:
+                <ul>
+                    <li>"O resultado é: &lt;<span>resultado</span>&gt;."</li>
+                </ul>
+            </li>
+        </ol>
+        <h3>*A informação em vermelho é uma variável e deve ser substituída pelo seu respectivo valor calculada dentro da aplicação.</h3>   
+
+        <input type="text" id="n1" placeholder="Informe o número 1" />
+        <input type="text" id="n2" placeholder="Informe o número 2" />
+        <select type="text" id="op" placeholder="Informe a operação">
+           <option value='soma'>Soma</option> 
+           <option value='subtracao'>Subtração</option> 
+        </select>
+        <button onclick="calc()">Vai lá</button>
+        <h1 id='resultado'></h1>    
+    </body>
+</html>

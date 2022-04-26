@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript</title>
+	<script type="text/javascript">
+		function eventoTeclado() { 
+			console.log(event.key); 
+			if (event.key === '0') {
+				alert('numero 0 digitado')
+			}
+		}
+		function acao() { 
+			console.log('acao disparada'); 
+		}
+	</script>
+</head>
+<body>
+	<input onkeydown="eventoTeclado()" type="text" name="" placeholder='down'>
+	<input onkeypress="acao()" type="text" name="" placeholder='press'>
+	<input onkeyup="acao()" type="text" name="" placeholder='up'>
+</body>
+</html>

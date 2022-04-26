@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Escopo Variáveis</title>
+		<script type="text/javascript">
+			// 3 escopo: globais, função, bloco
+			// bloco hoisting (elevação)
+
+			// escopo global
+			var idade = 74;
+
+			if (true) {
+				// escopo bloco
+				var altura = 100;
+				document.write(idade);
+			}
+
+			function retorna() {
+				var massa = 300;
+				document.write(idade);	
+				document.write(altura);
+				document.write(massa);
+				if (true) {
+					var massa2 = 100;
+				}
+			}
+
+			retorna();
+
+			document.write(idade);
+			document.write(altura);
+			document.write(massa); // nao renderiza
+
+
+		</script>
+	</head>
+	<body>
+		<h1>Escopo Variáveis</h1>
+	</body>
+</html>

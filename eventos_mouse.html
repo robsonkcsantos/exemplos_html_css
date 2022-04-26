@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript</title>
+	<script type="text/javascript">
+		var txt = 'Evento Disparado'
+		function acao1() { console.log(txt + ' 1') }
+		function acao2() { console.log(txt + ' 2') }
+		function acao3() { console.log(txt + ' 3') }
+	</script>
+	<style type="text/css">
+		div {
+			height: 150px;
+			width: 150px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+<div onclick='acao1()' style='background-color: dimgray;'></div>
+<div ondblclick='acao2()' style='background-color: skyblue;'></div>
+<div onmouseover="acao3()" style='background-color: seagreen;'></div>
+<div onmouseout="acao2()" style='background-color: indianred;'></div>
+</body>
+</html>

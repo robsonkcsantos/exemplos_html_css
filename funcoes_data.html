@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Funções Data</title>
+		<script type="text/javascript">
+			var data = new Date()
+
+			document.write(data.getTime())
+
+			var d1 = new Date(2022, 2, 24);
+			var d2 = new Date(2022, 2, 30);
+			document.write(d1.toString())
+			document.write('<hr>')
+			document.write(d2.toString())
+			document.write('<hr>')
+
+			var ml = Math.abs(d1.getTime()-d2.getTime());
+
+			var mld = (1*24*60*60*1000);
+			document.write('Diferença entre os dias em ML:' + ml)
+			document.write('<hr>')
+			document.write('ML de um dia inteiro: '+mld)
+			document.write('<hr>')
+
+			document.write('A diferença entre d1 e d2 é de ' + Math.ceil(ml/mld) + 'dia(s)' )
+
+			/*
+			document.write(data.getDate() + '/' +
+				          (data.getMonth()+1) + '/' +
+				           data.getFullYear())
+			document.write(Intl.DateTimeFormat().format());
+			document.write('<hr>')
+			document.write(data.toString())
+			document.write('<hr>')
+			data.setDate(data.getDate() + 700)
+			document.write(data.toString())
+			document.write('<hr>')
+			data.setMonth(data.getMonth() - 2)
+			document.write(data.toString())
+			document.write('<hr>')
+			data.setFullYear(data.getFullYear() + 1)
+			document.write(data.toString())
+			document.write('<hr>') */
+
+
+
+
+
+
+		</script>
+	</head>
+	<body>
+		<h1>Funções Data</h1>
+	</body>
+</html>

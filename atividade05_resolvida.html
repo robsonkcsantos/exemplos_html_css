@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Atividade 5 JavaScript</title>
+
+	<script>
+		var objetos = ['Cadeira','Impressora','Garfo']
+
+		function adicionarObjetos() {
+			var objeto = document.getElementById('objeto').value
+
+			if (objeto != '') {
+				if(objetos.indexOf(objeto) !== -1) {
+					alert('cumpanheiro, o treco existe!')
+					document.getElementById('objeto').value = ''
+				} else {
+					objetos.push(objeto)
+					console.log(objetos)
+					document.getElementById('objeto').value = ''
+				}
+			} else {
+				alert('cumpanheiro, coloca um valor no negocio ai!')
+			}
+		}
+		function ordenarObjetos() {
+			objetos.sort()
+			console.log(objetos)
+		}
+	</script>
+
+</head>
+<body>
+	<input type='text' id='objeto'>
+	<button onclick='adicionarObjetos()'>Adicionar</button>
+	<button onclick='ordenarObjetos()'>Ordenar</button>
+</body>
+</html>
