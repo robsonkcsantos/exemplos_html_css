@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceito JS</title>
+
+	<script>
+		let Carro1 = {
+			cor: `branco`,
+			marca: `fusca`,
+			ano: `1997`,
+			rebaixado: true,
+			som() {
+				console.log(`tocando legião urbana...`)
+			}
+		}
+
+		let Carro2 = {
+			cor: `amarela`,
+			marca: `brasilia`,
+			ano: `1985`,
+			rebaixado: true,
+			som() {
+				console.log(`tocando mamonas assassinas...`)
+			}
+		}
+
+		console.log(Carro1, Carro2)
+
+		let CarroFactory = function(cor,marca,ano,rebaixado) {
+			return {
+				cor,
+				marca,
+				ano,
+				rebaixado,
+				som(s) {
+					console.log(`tocando ${s}...`)
+				}
+			}
+		}
+
+		let Carro3 = CarroFactory(`rosa`,`Gol`,1990, false)
+		let Carro4 = CarroFactory(`branco`,`Audi`,2022, true)
+
+		console.log(Carro3)
+		console.log(Carro4)
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

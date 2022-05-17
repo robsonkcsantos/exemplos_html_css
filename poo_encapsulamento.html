@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos Javascript</title>
+
+	<script>
+		class Radio {
+			construtor(f = 98.7, ff = 'fm', v = 3) {
+				this._frequencia = f
+				this._faixaFrequencia = ff
+				this._volume = v
+				this._listaFrequencias = Array(98.7,95.3,107.9,104.5)
+			}
+			//getters and setters
+			get frequencia() {
+				return this._frequencia
+			}
+
+			set frequencia(f) {
+				if(this._listaFrequencias.indexOf(f) !== -1) {
+					this._frequencia = f
+				}
+			}
+		}
+
+		let radio = new Radio(95.3,'fm',5)	
+		radio.frequencia = 104.5
+		console.log(radio.frequencia)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos Javascript</title>
+	<script>
+		
+		class ContaBancaria {
+			construtor(a,nc,s,ce,cpa,c,n) {
+				this.agencia = a
+				this.numConta = nc
+				this.saldo = s
+				this.chequeEspecial = ce
+				this.chavePixAleatorio = cpa
+				this.cpf = c
+				this.nome = n
+			}
+			imprimirExtrato(){
+				consultaSaldo()
+			}
+			consultaSaldo(){
+				console.log(saldo)
+			}
+			sacar(){
+				saldo -= valor
+				console.log(saldo)
+			}
+			depositar(){
+				saldo += valor
+				console.log(saldo)
+			}
+			pagar(){
+				console.log('pagando...')
+			}
+			transferir(){
+				console.log('transferindo...')
+			}
+		}
+
+		let cliente = new ContaBancaria(
+				0001,
+				01230,
+				1376998.25,
+				96000.00,
+				1029384756,
+				01233218,
+				'Prof. Robson Kerner')
+
+		cliente.depositar(12000.00)
+		cliente.sacar(2.00)
+		cliente.transferir()
+		cliente.imprimirExtrato()
+
+		let agencia;
+		let numConta;
+		let saldo;
+		let chequeEspecial;
+		let chavePixAleatorio;
+		let cpf;
+		let nome;
+
+		function imprimirExtrato() {
+			saldo()
+		} 
+
+		function saldo() {
+			console.log(saldo)
+		}
+
+		function sacar(valor) {
+			saldo -= valor
+			console.log(saldo)
+		}
+
+		function depositar(valor) {
+			saldo += valor
+			console.log(saldo)
+		}
+
+		function pagar() {
+			console.log('pagando...')
+		}
+
+		function transferir() {
+			console.log('transferindo...')
+		}
+
+		agencia  = 1020
+		numConta = 012321
+		saldo 	 = 23950.00
+		chequeEspecial = 96000.00
+		chavePixAleatorio = 12345678
+		cpf = 01
+		nome = 'Prof. Robson Kerner'
+
+		depositar(12000.00)
+		sacar(2.00)
+		transferir()
+		imprimirExtrato()
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

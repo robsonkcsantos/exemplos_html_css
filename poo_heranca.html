@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos Javascript</title>
+
+	<script>
+		class Animal {
+			construtor(cor, tamanho, peso, locomocao) {
+				this.cor = cor
+				this.tamanho = tamanho
+				this.peso = peso
+				this.locomocao = locomocao
+			}
+		}
+
+		class Cachorro extends Animal {
+			construtor(cor, tamanho, peso, locomocao, patas) {
+				super(cor, tamanho, peso, locomocao)
+				this.patas = patas
+			}
+
+			rosnar() {
+				console.log('grrrrr')
+			}
+		}
+
+		class Peixe extends Animal {
+			construtor(cor, tamanho, peso, locomocao, nadadeiras) {
+				super(cor, tamanho, peso, locomocao)
+				this.nadadeiras = nadadeiras
+			}
+
+			nadar(){
+				console.log('nadando')
+			}
+		}
+
+		
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos JavaScript</title>
+
+	<script>
+		
+		function validNetwork (rede = 'wlan', canal = '1') {
+			document.write(`A rede ${rede}, foi acessada no canal ${canal}.`)
+		}
+
+		validNetwork(undefined,11);
+		
+		//var quadrado = function(n) {
+		//	return n*n
+		//}
+
+		//var quadrado = (n) => {
+		//	return n*n
+		//}
+
+		var quadrado = n => n*n
+		document.write(quadrado(10))
+
+		// função que verifica se é par ou impar
+		// function qualE(numero) {
+		// 	if (numero % 2 == 0) {
+		// 		return 'e par'
+		// 	} else {
+		// 		return 'e impar'
+		// 	}
+		// }
+
+		// var qualE = (numero) => {
+		// 	if (numero % 2 == 0) {
+		// 		return 'e par'
+		// 	} else {
+		// 		return 'e impar'
+		// 	}	
+		// }
+
+		var q = n => n%2==0 ? 'p' : 'i'
+		document.write(q(10))
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

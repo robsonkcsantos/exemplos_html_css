@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos JS</title>
+
+	<script>
+		class Pessoa {
+			constructor(cpf, nome) {
+				this.cpf = cpf
+				this.nome = nome
+			}
+
+			verPerfil() {
+				console.log(`${this.nome} possiu o cpf ${this.cpf}`)
+			}
+		}
+		let pessoa = new Pessoa(`0123456789`,`Prof. Robson`)
+		pessoa.verPerfil()
+
+		let pessoaLiteral = {
+			cpf: `0123456789`,
+			nome: `Prof. Robson Kerner`,
+			verPerfil: function() {
+				console.log(`${this.nome} possui o cpf ${this.cpf}`)
+			}
+		}
+		pessoaLiteral.verPerfil()
+
+		let first_name = `Robson`
+		let last_name = `Santos`
+		let email = `robson@`
+		let atuacao = `Administrador`
+
+		let persona = {
+			first_name: first_name,
+			last_name: last_name,
+			email: email,
+			atuacao: atuacao,
+			verPerfil: function() {
+				console.log(`
+						${this.last_name}, ${this.first_name} \n
+						${this.email} \n
+						${this.atuacao}
+					`)
+			}
+		}
+		persona.verPerfil()
+
+		let persona_alternativa = {
+			first_name,
+			last_name,
+			email,
+			atuacao,
+			verPerfil() {
+				console.log(`
+						${this.last_name}, ${this.first_name} \n
+						${this.email} \n
+						${this.atuacao}
+					`)
+			}
+		}
+		persona_alternativa.verPerfil()
+		persona_alternativa.first_name = `Roberto`
+		persona_alternativa.email = `roberto@`
+		persona_alternativa.verPerfil()
+		persona_alternativa.genero = `Masculino`
+		console.log(persona_alternativa)
+		persona_alternativa.confirmaStatus = () => console.log(`Status Confirmado`)
+		persona_alternativa.confirmaStatus()
+
+		var persona_alternativa_copy = persona_alternativa
+
+		persona_alternativa_copy.first_name = `Robson`
+
+		console.log(persona_alternativa_copy)
+		console.log(persona_alternativa)
+
+		var persona_copy = Object.assign({},persona_alternativa)
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

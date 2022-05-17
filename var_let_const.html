@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos Javascript</title>
+
+	<script>
+		// escopo de variaveis
+		// global, funcao, bloco 
+		// let
+		const game2 = 'mineirinho'		
+		let game = 'God of War'
+		
+		const games = ['lol','worms', 'mineirinho']
+		games[0] = 'Carnage'
+		games.push('lol')
+		//games = 'a lenda do heroi'
+
+		const games2 = {
+			name:"Shadow of the Colossus",
+			plataforma:"ps2,ps3,ps4,ps5",
+			qualidade:"top"
+		}
+
+		games2.qualidade = "+++top"
+		games2.proprietario = "Paulo"
+ 		console.log(games2)
+		console.log(games)
+		console.log(game2)
+		console.log(`global ${game}`); 
+
+		function deletaGame() {
+			const game2 = 'Residente Evil'
+			let game = 'the last of us'
+			console.log(`funcao ${game}`);
+			if (true) {
+				let game = 'worms'
+				console.log(`bloco funcao ${game}`);
+			}
+		}
+
+		deletaGame()
+
+		if (true) {
+			let game = 'scarface'
+			console.log(`bloco ${game}`);
+		}
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

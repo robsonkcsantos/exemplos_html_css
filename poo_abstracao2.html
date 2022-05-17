@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos Javascript</title>
+	<script>
+	//empresa de games: daniel & cia
+	// jogos para xbox series x e ps5
+
+	//forza
+	let plano_assinatura = 'gamepass'
+	let plataforma = 'xbox'
+	let versao = 'series x'
+	let nome = 'forza'
+
+	//crash bandicoot 
+	let plano_assinatura2 = 'playstation plus'
+	let plataforma2 = 'playstation'
+	let versao2 = '5'
+	let nome2 = 'crash'
+
+	class Game {
+		construtor(pa, p, v, n){
+			this.plano_assinatura = pa
+			this.plataforma = p
+			this.versao = v
+			this.nome = n
+		}
+	}
+
+	let games2 = Array()
+	games2.push(new Game('gamepass','xbox','series x','forza'))
+	games2.push(new Game('playstation plus','playstation','5','crash'))
+
+	let game1 = new Game('gamepass','xbox','series x','forza')
+	let game2 = new Game('playstation plus','playstation','5','crash')
+
+	let games = Array()
+	games[0] = Array()
+	games[0]['plano_assinatura'] = 'gamepass'
+	games[0]['plataforma'] = 'xbox'
+	games[0]['versao'] = 'series x'
+	games[0]['nome'] = 'forza'
+	games[1] = Array()
+	games[1]['plano_assinatura'] = 'playstation plus'
+	games[1]['plataforma'] = 'playstation'
+	games[1]['versao'] = '5'
+	games[1]['nome'] = 'crash'	
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

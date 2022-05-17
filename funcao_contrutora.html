@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceritos JS</title>
+	<script>
+		let Carro = function () {
+			this.cor = `Vermelho`
+			this.marca = `Ferrari`
+			this.modelo = `Spider`
+			var velocidadeMaxima = 340
+			var velocidadeAtual = 0
+			var estado = false
+
+			this.acelerar = function() {
+				
+				if (this.estado&&this.velocidadeAtual<this.velocidadeMaxima) {
+					this.velocidadeAtual += 20
+				} else {
+					if(this.velocidadeAtual<=this.velocidadeMaxima) {
+						console.log(`voa, voa, aviãozinho!!! velocidade maxima as 15 horas na globo!!!`)
+					} else {
+						console.log(`ligue o carro antes!!! me ajuda a te ajudar com uma experiencia unica!!! Use o cinto!!!`)
+					}
+				}
+			}
+
+			this.ligarCarro = function() {
+				this.estado = true
+			}
+
+			this.getVelocidadeAtual = function(){
+				return velocidadeAtual
+			}
+
+			this.frenar = function() {
+				this.velocidadeAtual = 0
+				this.estado = false
+			}
+
+			this.motor = function() {
+				return this.estado ? 'carro ligado' : `carro desligado`
+			}
+		}
+
+		let carro = new Carro()
+		carro.cor = `Amarelo`
+		console.log(carro)
+		//carro.acelerar()
+		carro.ligarCarro()
+		carro.acelerar()
+		carro.acelerar()
+		carro.acelerar()
+		carro.acelerar()
+		carro.acelerar()
+		carro.acelerar()
+		carro.acelerar()
+		carro.acelerar()
+		console.log(carro.getVelocidadeAtual())
+		carro.acelerar()
+		carro.acelerar()
+		console.log(carro.getVelocidadeAtual())
+		carro.frenar()
+		console.log(carro.getVelocidadeAtual())
+		console.log(carro.motor())
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
